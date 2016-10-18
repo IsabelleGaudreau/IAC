@@ -43,14 +43,21 @@ Execute the following steps to provision a basic two-tier architecture on AWS:
 3. Customize `terraform.template` and save it as `terraform.tfvars` in the project root
 4. Save a copy of `launch.template` as `launch.sh` in the project root
 5. Open a terminal window in your local repository location and make the launch script executable:
+
 ```$ chmod u+x launch.sh```
+
 6. Run the following command to examine the Terraform execution plan before deploying to AWS:
+
 ```$ terraform plan```
+
 7. Review the proposed changes and make any modifications necessary
 8. Repeat steps 6 and 7 until satisfied with the execution plan
 9. Run the following command to execute the Terraform plan and deploy the infrastructure to AWS:
+
 ```$ ./launch.sh```
+
 10. After the infrastructure is deployed, the public DNS of the load balancer will be displayed in the terminal:
+
 ```
 $ Outputs:
 
