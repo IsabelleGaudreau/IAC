@@ -82,6 +82,6 @@ which will allow you to review the changes prior to termination. Once you're sat
 to confirm the termination and destroy your infrastructure resources.
 
 ## Future Enhancements
-This project is only an sample of what is possible using Terraform. For example, further enhancements could be made by
+This project is only a sample of what is possible using Terraform. For example, further enhancements could be made by
 provisioning [Launch Configurations](https://www.terraform.io/docs/providers/aws/r/launch_configuration.html) and [Auto Scaling Groups](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html) to replace some of the variable interpolation
 currently present.
