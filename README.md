@@ -22,6 +22,7 @@ The most you should be charged is a few dollars, but I am not responsible for an
 
 ## Planning
 Execute the following steps to provision a basic two-tier architecture on AWS:
+
 1. Download and [install Terraform](https://www.terraform.io/intro/getting-started/install.html)
 2. Clone or fork this repository
 3. Customize `terraform.template` and save it as `terraform.tfvars` in the project root
