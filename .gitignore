@@ -1,0 +1,14 @@
+# File system
+.DS_Store
+.vscode
+*.sh
+
+# Terraform 
+*.tfvars
+*.tfplan
+*.tfstate
+*.tfstate.backup
+*.tft
+
+# Misc
+notes

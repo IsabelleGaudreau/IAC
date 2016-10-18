@@ -1,0 +1,27 @@
+#!/bin/bash
+# 1. copy this file and save it as launch.sh in the project root
+# 2. make the script executable (e.g., chmod 775 launch.sh)
+# 3. run the script to build the sample infrastructure on aws (i.e., ./launch.sh)
+
+# check for existence of the ssh private key and create if needed
+if [ ! -f "~/.ssh/smp-iac-terraform.pem" ]; then
+  # create the keypair using the awscli
+  aws ec2 --region us-west-2 create-key-pair --key-name smp-iac-terraform \
+  --query 'KeyMaterial' --output text > ~/.ssh/smp-iac-terraform.pem
+  # set the appropriate permissions on the private key
+  chmod 600 ~/.ssh/smp-iac-terraform.pem
+  # start the ssh-agent
+  eval $(ssh-agent)
+  # add the newly created key so the provisioners can connect to the instances
+  ssh-add ~/.ssh/smp-iac-terraform.pem
+else
+  echo "Private key already exists...[skipping]"
+fi
+
+# execute the terraform plan 
+terraform apply
+
+# note: the elb dns address will be automatically displayed once the infrastructure 
+# has been built. the dns address will likely be available before all instances are registered 
+# so wait at least 10 mins prior to visiting that address in a browser or reload 
+# the page after 10 mins have passed.
