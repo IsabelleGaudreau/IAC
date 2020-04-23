@@ -1,0 +1,27 @@
+aws_access_key = <ACCESS_KEY>
+aws_secret_key = <SECRET_KEY>
+
+aws_region = "us-west-2"
+aws_az_1 = "us-west-2a"
+aws_az_2 = "us-west-2b"
+aws_az_3 = "us-west-2c"
+
+aws_ec2_key_name = "smp-iac-terraform"
+aws_ec2_key_path = "~/.ssh/smp-iac-terraform.pem"
+aws_ec2_ami = "ami-b04e92d0"
+aws_ec2_instance_type = "t2.micro"
+aws_ec2_instance_name = "smp-iac-webserver-"
+aws_ec2_instance_count = "2"
+
+aws_nat_ami = "ami-030f4133"
+
+aws_s3_bucket_name = "smp-iac-terraform"
+
+aws_vpc_subnet_prefix = "smp_iac_subnet_"
+
+atlas = <ATLAS_ENV>
+atlas_token = <ATLAS_TOKEN>
+
+consul_datacenter_name = <CONSUL_DC_NAME>
+
+restricted_access_cidr_blocks = <RESTRICTED_CIDR>
